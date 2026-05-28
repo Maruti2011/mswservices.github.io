@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSW Computer & CCTV Services | Premium Tech Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS DESIGN - ULTRA MODERN PREMIUM THEME */
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #111827;
+            --text-main: #ffffff;
+            --text-muted: #9ca3af;
+            --primary: #00f2fe;
+            --primary-hover: #4facfe;
+            --accent: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Navbar & Header */
+        header {
+            background-color: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 15px 5%;
+            display: block;
+        }
+
+        .nav-container {
+            display: block;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--text-main);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 100px 5% 80px 5%;
+            text-align: center;
+            background: radial-gradient(circle at top, rgba(0, 242, 254, 0.15), transparent 60%);
+        }
+
+        .hero-badge {
+            background: rgba(0, 242, 254, 0.1);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 242, 254, 0.2);
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero-section h1 span {
+            background: linear-gradient(to right, var(--primary), var(--primary-hover));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 35px auto;
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+            color: #000;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 20px rgba(0, 242, 254, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 242, 254, 0.5);
+        }
+
+        /* Stats Section */
+        .stats-container {
+            display: block;
+            text-align: center;
+            margin: 40px auto;
+            max-width: 1100px;
+            padding: 0 20px;
+        }
+
+        .stat-box {
+            display: inline-block;
+            width: 28%;
+            background: var(--card-bg);
+            padding: 25px;
+            margin: 10px 2%;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            vertical-align: top;
+        }
+
+        .stat-box h3 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .stat-box p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            margin: 80px 0 40px 0;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Services Section (Custom Layout for Compatibility) */
+        .services-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .service-card {
+            display: inline-block;
+            width: 45%;
+            background: var(--card-bg);
+            padding: 40px 30px;
+            margin: 15px 2%;
+            border-radius: 16px;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+            vertical-align: top;
+            box-sizing: border-box;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            background: linear-gradient(180deg, #111827 0%, #152035 100%);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 242, 254, 0.1);
+            border-radius: 12px;
+            display: block;
+            text-align: center;
+            line-height: 60px;
+            margin-bottom: 25px;
+        }
+
+        .icon-box i {
+            font-size: 1.8rem;
+            color: var(--primary);
+            vertical-align: middle;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact-wrapper {
+            max-width: 800px;
+            margin: 60px auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+
+        .contact-wrapper h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-info-item {
+            margin: 20px 0;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+        }
+
+        .contact-info-item i {
+            color: var(--primary);
+            margin-right: 12px;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 38px;
+            line-height: 65px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 10000;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive adjustments */
+        @media (max-width: 768px) {
+            .service-card { width: 96%; margin: 15px 2%; }
+            .stat-box { width: 96%; margin: 10px 2%; }
+            .hero-section h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">MSW <span>Computer & CCTV</span></div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-badge">⚡ Professional Technical Services</div>
+        <h1>Next-Gen Tech Solutions For Your <span>Home & Business</span></h1>
+        <p>Hum pradan karte hain high-speed computer repairs, advanced network setups, aur ultra-secure CCTV surveillance systems aapki suraksha aur suvidha ke liye.</p>
+        <a href="https://wa.me/91XXXXXXXXXX?text=Hi,%20I%20want%20to%20book%20a%20service." class="cta-btn" target="_blank">
+            <i class="fa-solid fa-calendar-check" style="margin-right: 8px;"></i> Book Service Now
+        </a>
+    </section>
+
+    <div class="stats-container">
+        <div class="stat-box">
+            <h3>500+</h3>
+            <p>Happy Customers</p>
+        </div>
+        <div class="stat-box">
+            <h3>100%</h3>
+            <p>Reliable Security</p>
+        </div>
+        <div class="stat-box">
+            <h3>Fast</h3>
+            <p>Same Day Repairing</p>
+        </div>
+    </div>
+
+    <div class="section-title">
+        <h2>Premium Technical Expertise</h2>
+        <p>Top-notch quality services jo aapke business ko rakhe hamesha aage</p>
+    </div>
+
+    <div class="services-wrapper">
+        
+        <div class="service-card">
+            <div class="icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>Computer & Laptop Solutions</h3>
+            <p>OS Installation (Windows updates), full system optimization, hardware diagnostics, and professional software setup like AutoCAD.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Advanced CCTV Installation</h3>
+            <p>High-Definition (HD) aur Smart IP cameras ka modern setup, live mobile viewing configuration, aur long-term storage maintenance.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon-box"><i class="fa-solid fa-print"></i></div>
+            <h3>Enterprise Printer Care</h3>
+            <p>Specialized repair and networking for heavy-duty commercial printers, focusing on systems like Canon imageRUNNER series.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
+            <h3>Smart Networking & Sharing</h3>
+            <p>Office or home LAN deployment, multi-device printer sharing configuration, high-speed router setups, and secure firewall configuration.</p>
+        </div>
+
+    </div>
+
+    <div class="section-title">
+        <h2>Get In Touch</h2>
+        <p>Karein seedha sampark aur payein instant technical help</p>
+    </div>
+
+    <div class="contact-wrapper">
+        <h3>MSW Computer & CCTV Services</h3>
+        <p style="color: var(--text-muted); margin-bottom: 25px;">Aap hume niche diye gaye details par contact kar sakte hain ya directly WhatsApp button dabayein.</p>
+        
+        <div class="contact-info-item">
+            <i class="fa-solid fa-location-dot"></i> Pune, Maharashtra, India
+        </div>
+        <div class="contact-info-item">
+            <i class="fa-solid fa-phone"></i> +91 9172382315 </div>
+    </div>
+
+    <a href="https://wa.me/=91-9172382315?text=Hi,%20I%20found%20your%20website%20and%20want%20to%20inquire%20about%20your%20services." class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <p>&copy; 2026 MSW Computer & CCTV Services. All Rights Reserved. | Designed with ❤️</p>
+    </footer>
+
+</body>
+</html>

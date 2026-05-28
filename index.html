@@ -21,6 +21,7 @@
             --text-white: #ffffff;
             --text-gray: #a1a1aa;
             --border-dark: #27272a;
+            --npav-green: #25d366;
         }
 
         * {
@@ -180,6 +181,131 @@
             line-height: 1.7;
         }
 
+        /* NPAV Partner Section Styling */
+        .partner-section {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: linear-gradient(135deg, #141416 0%, #0c0c0e 100%);
+            border: 1px solid var(--border-dark);
+            border-radius: 24px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .partner-cert-container {
+            flex-shrink: 0;
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid var(--border-dark);
+            transition: all 0.3s ease;
+        }
+
+        .partner-cert-container:hover {
+            transform: scale(1.03);
+            border-color: #ff3b30;
+        }
+
+        .partner-cert-container img {
+            width: 100%;
+            display: block;
+        }
+
+        .partner-info h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .partner-info h3 span {
+            color: #ff3b30;
+        }
+
+        .partner-badge {
+            display: inline-block;
+            background-color: rgba(255, 59, 48, 0.1);
+            color: #ff3b30;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 59, 48, 0.2);
+        }
+
+        .partner-info p {
+            color: var(--text-gray);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .dealer-code-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #1e1e20;
+            border: 1px solid var(--border-dark);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .dealer-code-box span {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        .dealer-code-box strong {
+            font-size: 1.1rem;
+            color: var(--accent-blue);
+            letter-spacing: 1px;
+        }
+
+        /* Certificate Modal/Popup */
+        .cert-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 3000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 12px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.5);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-modal:hover {
+            color: var(--accent-blue);
+        }
+
         /* Services Block */
         .section-heading {
             text-align: center;
@@ -324,10 +450,13 @@
         }
 
         @media (max-width: 768px) {
-            .executive-profile {
+            .executive-profile, .partner-section {
                 flex-direction: column;
                 text-align: center;
                 padding: 30px 20px;
+            }
+            .partner-cert-container {
+                width: 160px;
             }
             .hero h1 { font-size: 2.4rem; }
             nav { padding: 15px 5%; }
@@ -364,6 +493,28 @@
             <div class="designation">Founder & Technical Director</div>
             <p>Leading MSW Computer & CCTV Services with precise execution. We specialize in deep hardware-level recovery, high-definition IP surveillance networks, and seamless structural system configurations tailored perfectly to modern client requirements.</p>
         </div>
+    </div>
+
+    <!-- Official NPAV Partner Section -->
+    <div class="partner-section">
+        <div class="partner-cert-container" onclick="openCertModal()">
+            <img src="35807.jpg" alt="Net Protector Certified Partner Badge" onerror="this.src='35806.jpg'">
+        </div>
+        <div class="partner-info">
+            <div class="partner-badge">Silver Rating</div>
+            <h3>Net Protector <span>Cyber Security</span></h3>
+            <p>We are proudly integrated as an Authorized Channel Partner for Net Protector Enterprise. Providing high-grade corporate endpoint security, multi-layered data leak prevention, cloud backup mechanisms, and total server protection frameworks directly verified by NPAV Labs.</p>
+            <div class="dealer-code-box">
+                <span>Authorized Dealer Code:</span>
+                <strong>M-3925</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificate Popup Modal -->
+    <div id="certModal" class="cert-modal" onclick="closeCertModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="imgModal" src="35807.jpg" alt="Full NPAV Certificate">
     </div>
 
     <!-- Core Services Grid -->
@@ -430,6 +581,16 @@
     <footer>
         <p>&copy; 2026 MSW Computer & CCTV Services. All Rights Reserved. Pune.</p>
     </footer>
+
+    <!-- Javascript for Popup -->
+    <script>
+        function openCertModal() {
+            document.getElementById("certModal").style.display = "flex";
+        }
+        function closeCertModal() {
+            document.getElementById("certModal").style.display = "none";
+        }
+    </script>
 
 </body>
 </html>

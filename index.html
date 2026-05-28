@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Google Search (SEO) Tags: Isse website "MSW" search karne par upar aayegi -->
-    <title>MSW Computer & CCTV Services. | Pune</title>
+    <title>MSW Computer & CCTV Services | Pune</title>
     <meta name="description" content="MSW Computer & CCTV Services by Maruti S Waghamare. Best computer repair, laptop sales, printer service, and CCTV camera installation in Pune.">
     <meta name="keywords" content="MSW, MSW Computer, MSW CCTV, MSW Services, Maruti S Waghamare, MSW Pune, Computer Repair Manjri, CCTV Installation Pune">
     <meta name="author" content="Maruti S Waghamare">
@@ -21,7 +20,6 @@
             --text-white: #ffffff;
             --text-gray: #a1a1aa;
             --border-dark: #27272a;
-            --npav-green: #25d366;
         }
 
         * {
@@ -196,7 +194,7 @@
 
         .partner-cert-container {
             flex-shrink: 0;
-            width: 200px;
+            width: 180px;
             height: auto;
             cursor: pointer;
             border-radius: 12px;
@@ -207,7 +205,7 @@
 
         .partner-cert-container:hover {
             transform: scale(1.03);
-            border-color: #ff3b30;
+            border-color: var(--accent-blue);
         }
 
         .partner-cert-container img {
@@ -219,9 +217,6 @@
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
         .partner-info h3 span {
@@ -230,8 +225,8 @@
 
         .partner-badge {
             display: inline-block;
-            background-color: rgba(255, 59, 48, 0.1);
-            color: #ff3b30;
+            background-color: rgba(0, 210, 255, 0.1);
+            color: var(--accent-blue);
             padding: 4px 12px;
             border-radius: 50px;
             font-size: 0.8rem;
@@ -239,7 +234,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 15px;
-            border: 1px solid rgba(255, 59, 48, 0.2);
+            border: 1px solid rgba(0, 210, 255, 0.2);
         }
 
         .partner-info p {
@@ -289,7 +284,6 @@
             max-width: 90%;
             max-height: 90vh;
             border-radius: 12px;
-            box-shadow: 0 5px 30px rgba(0,0,0,0.5);
         }
 
         .close-modal {
@@ -299,11 +293,6 @@
             color: white;
             font-size: 2.5rem;
             cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        .close-modal:hover {
-            color: var(--accent-blue);
         }
 
         /* Services Block */
@@ -457,6 +446,7 @@
             }
             .partner-cert-container {
                 width: 160px;
+                margin: 0 auto;
             }
             .hero h1 { font-size: 2.4rem; }
             nav { padding: 15px 5%; }
@@ -466,15 +456,13 @@
 </head>
 <body>
 
-    <!-- Header Navbar -->
     <nav>
         <div class="logo-area">
-            <img src="image.png" alt="MSW Logo" class="main-logo" onerror="this.src='https://raw.githubusercontent.com/maruti2011/mswservices.github.io/main/image.png'">
+            <img src="image.png" alt="MSW Logo" class="main-logo">
             <div class="logo-title">MSW <span>Computer & CCTV Services</span></div>
         </div>
     </nav>
 
-    <!-- Main Hero -->
     <section class="hero">
         <h1>MSW Computer & <span>CCTV Services</span></h1>
         <p>Premium multi-brand computer engineering, complete CCTV surveillance layout architectures, and laser-precise automation support crafted for absolute reliability across Pune.</p>
@@ -483,10 +471,9 @@
         </a>
     </section>
 
-    <!-- Executive Profile Block -->
     <div class="executive-profile">
         <div class="profile-pic-container">
-            <img src="image_1.png" alt="Maruti S Waghamare" onerror="this.src='https://raw.githubusercontent.com/maruti2011/mswservices.github.io/main/image_1.png'">
+            <img src="image_1.png" alt="Maruti S Waghamare">
         </div>
         <div class="profile-details">
             <h2>Maruti S Waghamare</h2>
@@ -495,13 +482,12 @@
         </div>
     </div>
 
-    <!-- Official NPAV Partner Section -->
     <div class="partner-section">
         <div class="partner-cert-container" onclick="openCertModal()">
-            <img src="35807.jpg" alt="Net Protector Certified Partner Badge" onerror="this.src='35806.jpg'">
+            <img src="35807.jpg" alt="Net Protector Certified Partner Badge">
         </div>
         <div class="partner-info">
-            <div class="partner-badge">Silver Rating</div>
+            <div class="partner-badge">Silver Rating Partner</div>
             <h3>Net Protector <span>Cyber Security</span></h3>
             <p>We are proudly integrated as an Authorized Channel Partner for Net Protector Enterprise. Providing high-grade corporate endpoint security, multi-layered data leak prevention, cloud backup mechanisms, and total server protection frameworks directly verified by NPAV Labs.</p>
             <div class="dealer-code-box">
@@ -511,13 +497,11 @@
         </div>
     </div>
 
-    <!-- Certificate Popup Modal -->
     <div id="certModal" class="cert-modal" onclick="closeCertModal()">
         <span class="close-modal">&times;</span>
         <img class="modal-content" id="imgModal" src="35807.jpg" alt="Full NPAV Certificate">
     </div>
 
-    <!-- Core Services Grid -->
     <div class="section-heading">
         <h2>Professional Solutions</h2>
         <p>Industrial-grade technical expertise delivered directly to your enterprise.</p>
@@ -549,7 +533,6 @@
         </div>
     </div>
 
-    <!-- Corporate Contact Hub -->
     <div class="hub-container">
         <div class="contact-hub-card">
             <h2 style="font-size: 2rem; border-bottom: 1px solid var(--border-dark); padding-bottom: 20px;">Corporate Connect</h2>
@@ -573,7 +556,6 @@
         </div>
     </div>
 
-    <!-- Floating WhatsApp Action -->
     <a href="https://wa.me/919172382315?text=Hello%20Maruti%20bhai,%20I%20checked%20your%20website%20and%20want%20to%20consult%20for%20technical%20services." class="fixed-whatsapp" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -582,7 +564,6 @@
         <p>&copy; 2026 MSW Computer & CCTV Services. All Rights Reserved. Pune.</p>
     </footer>
 
-    <!-- Javascript for Popup -->
     <script>
         function openCertModal() {
             document.getElementById("certModal").style.display = "flex";
